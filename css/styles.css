@@ -1,5 +1,16 @@
-#title {
-    background-color: #FF4C68;
+/* General settings */
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Montserrat', sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 body {
@@ -7,15 +18,19 @@ body {
     font-weight: lighter;
 }
 
-h1 {
-    font-size: 3.3rem;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.2;
-    color: white;
+/* Top Section */
+#title {
+    background-color: #FF4C68;
 }
 
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 10%;
+}
+
+.top-heading {
+    font-size: 3.3rem;
+    line-height: 1.2;
+    color: white;
 }
 
 .fa-brands{
@@ -44,13 +59,42 @@ h1 {
 }
 
 .phone-image {
+    width: 20%;
     transform: rotate(25deg);
-    width: 60%;
-    height: auto;
+    position: absolute;
+    margin-top: -50px;
+}
+/* Media Query */
+@media (max-width: 1180px) {
+    .phone-image {
+        transform: rotate(0);
+        position: static;
+        width: 70%;
+    }
+    #title {
+        text-align: center;
+    }
 }
 
+@media (max-width: 995px) {
+    .phone-image {
+        width: 30%;
+        padding-top: 10%;
+    }
+}
+
+@media (max-width: 680px) {
+    .phone-image {
+        width: 0%;
+    }
+}
+
+/* Features section */
 #features {
     padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
 }
 
 .features-column {
@@ -66,8 +110,73 @@ h1 {
     color: #FF4C68;
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+/* Testimonials section */
+#testimonials {
+    text-align: center;
+    background-color: #EF8172;
+    color: white;
 }
 
+.testimonial-image {
+    width: 15%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+/* Reviews section */
+#press {
+    background-color: #EF8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+/* Pricing section */
+#pricing {
+    padding: 100px;
+    text-align: center;
+}
+
+.pricing-column {
+    padding: 3% 2%;
+}
+
+/* CTA section */
+#cta {
+    background-color: #FF4C68;
+    color: white;
+    text-align: center;
+    padding: 5% 0;
+}
+
+.cta-h3 {
+    font-size: 60px;
+    padding: 0 15%;
+}
+
+.cta-button {
+    margin-top: 6%;
+}
+
+/* Footer and contact section */
+#footer {
+    text-align: center;
+}
+
+.contact-icons {
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.contact-icon {
+    padding: 0 10px;
+    font-size: 20px;
+}
